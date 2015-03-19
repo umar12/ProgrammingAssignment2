@@ -3,7 +3,7 @@
 ## value while the other function make use of that cached value or 
 ## calculate a new value if inverse matrix doesn't exist
 
-## The function makeCacheMatric creates a matrix and cache its inverse
+## The function makeCacheMatric creates a matrix object and cache its inverse
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y) {
@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## This function checks if the inverse is already been calculated and return the
-## if it already exists. If not then it calculates the inverse and returns that
+## matrix if it exists. Otherwise, it calculates the inverse and returns that
 ## matrix. The input matrix should always be ivertible
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
