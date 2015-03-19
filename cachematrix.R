@@ -24,13 +24,13 @@ makeCacheMatrix <- function(x = matrix()) {
 ## matrix. The input matrix should always be ivertible
 cacheSolve <- function(x, ...) {
     
-        inv <- x$getinv()
+        inv <- x$getinv()   #Get existing Inverted matrix
         if(!is.null(inv)) {
                 message("getting cached data")
                 return(inv)
         }
-        data <- x$get()
-        inv <- solve(data, ...)
+        data <- x$get()    #Get the input Matrix
+        inv <- solve(data, ...)    #Recalculate because inverse matrix doesn't exist
         x$setinv(inv)
         inv
 }
