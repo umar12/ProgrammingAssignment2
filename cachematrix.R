@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## matrix if it exists. Otherwise, it calculates the inverse and returns that
 ## matrix. The input matrix should always be ivertible
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    
         inv <- x$getinv()
         if(!is.null(inv)) {
                 message("getting cached data")
