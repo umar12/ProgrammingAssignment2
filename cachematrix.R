@@ -1,18 +1,18 @@
 ## These functions are written to fulfill the requirement of second
-## assignment. One function will create a matrix and cache its inverse
-## value while the other function make use of that cached value or 
+## assignment. One function will create an inverse matrix and cache its
+## value, while the other function makes use of that cached value or 
 ## calculate a new value if inverse matrix doesn't exist
 
-## The function makeCacheMatric creates a matrix object and cache its inverse
+## The function makeCacheMatric creates an inverse matrix object and cache it
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
-        set <- function(y) {
+        set <- function(y) {    # Set value of the input matrix
                 x <<- y
                 inv <<- NULL
         }
         get <- function() x
-        setinv <- function(solve) inv <<- solve
-        getinv <- function() inv
+        setinv <- function(solve) inv <<- solve    # Solve for inverse matrix
+        getinv <- function() inv    
         list(set = set, get = get,
              setinv = setinv,
              getinv = getinv)
